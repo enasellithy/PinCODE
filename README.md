@@ -7,6 +7,27 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## About APP Requirements
+This Laravel Version 8 Vue js 3 And Inertia js this app created to generate unique pin code
+- PHP Version 7.3
+
+## Install And Run
+- git clone https://github.com/enasellithy/PinCODE.git
+- cd PinCODE
+- composer install
+- php artisan key:generate
+- npm install
+- npx mix watch
+- php artisan serv --port=8000 
+- ## Notice
+  if you change port you should change url (generate function) in Header component file location in (resources/js/components/Header.vue)
+- generate() {
+  axios.post('http://localhost:8000/bin_code') // put the new url 
+  .then(res => {
+  this.codes.unshift(res.data);
+  });
+  },
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
